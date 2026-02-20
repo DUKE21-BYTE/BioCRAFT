@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioCraft – AI Bio Generator for Students</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======= NAVIGATION ======= -->
+  <nav id="mainNav">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        BioCraft
+      </a>
+      <ul class="nav-links">
+        <li><a href="#howItWorks">How it Works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="nav-login">Log in</a>
+        <a href="#generator" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="#howItWorks" class="mobile-link">How it Works</a>
+    <a href="#features" class="mobile-link">Features</a>
+    <a href="#pricing" class="mobile-link">Pricing</a>
+    <a href="#generator" class="btn btn-primary mobile-link" style="color:white; margin-top:20px;">Get Started</a>
+  </div>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-new">NEW</span> BioCraft AI is now live!
+      </div>
+      <h1 class="reveal reveal-delay-1">
+        Write a Professional Bio<br/>
+        in <span class="gradient-text">30 Seconds</span>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        Generate powerful LinkedIn bios, CV summaries, and internship profiles<br/>
+        using AI — built specifically for university students.
+      </p>
+      <div class="hero-buttons reveal reveal-delay-3">
+        <a href="#generator" class="btn btn-primary btn-shadow">Generate My Bio <i class="fa-solid fa-arrow-right" style="margin-left: 4px;"></i></a>
+        <a href="#example" class="btn btn-white-outline">See Example</a>
+      </div>
+      <p class="trust-line reveal reveal-delay-4">
+        ✨ No writing experience needed. No templates. Just smart AI.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======= PROBLEM ======= -->
+  <section class="problem-section" id="problem">
+    <div class="container problem-grid">
+      <div class="problem-image reveal">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop" alt="Students struggling to write bios" />
+      </div>
+      <div class="problem-content reveal reveal-delay-1">
+        <h2>Struggling to Describe Yourself Professionally?</h2>
+        <p class="problem-desc">Most students face the same challenges when it comes to professional writing. You have the skills, but putting them into words is hard.</p>
+        
+        <ul class="problem-list">
+          <li>
+            <div class="icon-bad"><i class="fa-solid fa-xmark"></i></div>
+            <span>Don't know what to write on LinkedIn</span>
+          </li>
+          <li>
+            <div class="icon-bad"><i class="fa-solid fa-xmark"></i></div>
+            <span>Copy generic CV summaries</span>
+          </li>
+          <li>
+            <div class="icon-bad"><i class="fa-solid fa-xmark"></i></div>
+            <span>Undersell their skills</span>
+          </li>
+          <li>
+            <div class="icon-bad"><i class="fa-solid fa-xmark"></i></div>
+            <span>Sound unprofessional or too casual</span>
+          </li>
+        </ul>
+
+        <div class="problem-quote">
+          "Your bio is your first impression. BioCraft helps you sound confident, structured, and career-ready — instantly."
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= HOW IT WORKS ======= -->
+  <section class="steps-section" id="howItWorks">
+    <div class="container text-center">
+      <h2 class="reveal">3 Simple Steps</h2>
+      <p class="section-sub reveal reveal-delay-1">From blank page to professional bio in under a minute.</p>
+      
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card reveal reveal-delay-1">
+          <div class="step-bg step-bg-1"></div>
+          <div class="step-num bg-blue">1</div>
+          <h3>Enter Your Details</h3>
+          <p>Add your course, key skills, and career interests. The more specific, the better the result.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="step-card reveal reveal-delay-2">
+          <div class="step-bg step-bg-2"></div>
+          <div class="step-num bg-purple">2</div>
+          <h3>Choose Your Tone</h3>
+          <p>Select how you want to sound: Professional for LinkedIn, Confident for CVs, or Friendly for portfolios.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="step-card reveal reveal-delay-3">
+          <div class="step-bg step-bg-3"></div>
+          <div class="step-num bg-green">3</div>
+          <h3>Get a Polished Bio</h3>
+          <p>Copy, download, and paste directly into LinkedIn or your CV. Done in under 30 seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= EXAMPLE OUTPUT ======= -->
+  <section class="example-section" id="example">
+    <div class="container text-center">
+      <p class="section-label reveal">SEE THE MAGIC</p>
+      <h2 class="reveal reveal-delay-1 text-white">Example Bio Output</h2>
+      
+      <div class="example-terminal reveal reveal-delay-2">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="terminal-meta">Generated in 1.2s</div>
+        </div>
+        <div class="terminal-body">
+          <p>
+            <span style="color: #64748b;">“</span><span style="color: #93c5fd;">Dennis Fundi</span> is a dedicated Information Technology student with a strong interest in <span class="highlight-code-purple">software development</span> and digital innovation. With hands-on experience in web development and problem-solving, he is passionate about building scalable solutions that solve real-world challenges. Skilled in <span class="highlight-code-blue">JavaScript, networking fundamentals, and system design</span>, Dennis is actively seeking internship opportunities where he can contribute, grow, and make impact.<span style="color: #64748b;">”</span>
+          </p>
+        </div>
+        <div class="terminal-footer">
+          <button class="term-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="term-btn"><i class="fa-solid fa-rotate-right"></i> Regenerate</button>
+        </div>
+      </div>
+      
+      <a href="#generator" class="cta-link reveal reveal-delay-3 text-white">Generate Yours Now <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ======= GENERATOR (Functionality stays, UI matches new design) ======= -->
+  <section class="generator-section bg-gray" id="generator">
+    <div class="container text-center">
+      <h2 class="reveal">Create Your Bio</h2>
+      <p class="section-sub reveal reveal-delay-1">Fill in the details below to generate your tailored bio.</p>
+      
+      <div class="gen-card reveal reveal-delay-2">
+        <form id="bioForm" autocomplete="off">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name <span>*</span></label>
+              <input type="text" id="nameInput" placeholder="e.g. Dennis Fundi" required>
+            </div>
+            <div class="form-group">
+              <label>Course / Major <span>*</span></label>
+              <input type="text" id="courseInput" placeholder="e.g. Information Technology" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>University</label>
+              <input type="text" id="uniInput" placeholder="e.g. University of Nairobi">
+            </div>
+            <div class="form-group">
+              <label>Key Skills <span>*</span></label>
+              <input type="text" id="skillsInput" placeholder="e.g. JavaScript, Python, UI Design" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Career Interests <span>*</span></label>
+            <input type="text" id="interestsInput" placeholder="e.g. Software Eng, Data Science" required>
+          </div>
+          <div class="form-group">
+            <label>Brief Experience</label>
+            <textarea id="expInput" placeholder="e.g. Built a student portal web app, internship at XYZ Corp..."></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-m">
+              <label>Bio Type</label>
+              <select id="bioType">
+                <option value="LinkedIn Bio">LinkedIn Bio</option>
+                <option value="CV Summary">CV Summary</option>
+                <option value="Personal Statement">Personal Statement</option>
+              </select>
+            </div>
+            <div class="form-group full-m">
+              <label>Tone</label>
+              <select id="toneSelect">
+                <option value="Professional">Professional</option>
+                <option value="Confident">Confident</option>
+                <option value="Friendly">Friendly</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Hidden tone input so JS works without rewrite -->
+          <div style="display:none;" class="tone-pills">
+            <input type="radio" name="tone" id="tonePro" value="Professional" checked>
+            <input type="radio" name="tone" id="toneConf" value="Confident">
+            <input type="radio" name="tone" id="toneFriendly" value="Friendly">
+          </div>
+
+          <button type="submit" class="btn btn-primary gen-submit" id="generateBtn">
+            Generate My Bio
+          </button>
+        </form>
+
+        <div class="usage-badge" id="usageBadge">
+          <span id="usageText">2 free bios remaining today</span>
+        </div>
+
+        <!-- Loading State -->
+        <div class="loading-state" id="loadingState">
+          <div class="spinner"></div>
+          <p>Crafting your professional bio...</p>
+        </div>
+
+        <!-- Result Area -->
+        <div class="result-area" id="resultArea">
+          <div class="result-box">
+            <div class="result-header">
+              <span class="status-success"><i class="fa-solid fa-check"></i> Your Bio</span>
+              <span class="result-meta" id="resultMeta"></span>
+            </div>
+            <div class="result-text" id="resultText"></div>
+            <div class="result-actions" id="resultActions">
+              <button class="btn btn-outline btn-sm" id="copyBtn" type="button">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+              <button class="btn btn-outline btn-sm" id="downloadBtn" type="button">
+                <i class="fa-solid fa-download"></i> Download
+              </button>
+              <button class="btn btn-outline btn-sm" id="regenerateBtn" type="button">
+                <i class="fa-solid fa-rotate-right"></i> Retry
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FEATURES ======= -->
+  <section class="features-section" id="features">
+    <div class="container text-center">
+      <h2 class="reveal">Built for Students</h2>
+      <p class="section-sub reveal reveal-delay-1">No fluff. Just professional results designed for your career growth.</p>
+      
+      <div class="features-grid">
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="icon-box icon-blue"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>AI trained for students</h3>
+          <p>Our models understand academic contexts, internships, and entry-level career requirements.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="icon-box icon-purple"><i class="fa-brands fa-linkedin-in"></i></div>
+          <h3>Optimized for LinkedIn</h3>
+          <p>Formats that work perfectly for LinkedIn summaries, headlines, and CV personal statements.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="icon-box icon-pink"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Multiple writing tones</h3>
+          <p>Switch between Professional, Confident, Friendly, or Creative to match your personality.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="icon-box icon-green"><i class="fa-regular fa-copy"></i></div>
+          <h3>Instant copy & download</h3>
+          <p>One-click copy to clipboard or download as a text file for your records.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="icon-box icon-yellow"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Free daily generations</h3>
+          <p>Get started for free. We believe every student deserves a great introduction.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="icon-box icon-red"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>Keyword Optimization</h3>
+          <p>Automatically includes industry keywords to help you get found by recruiters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PRICING ======= -->
+  <section class="pricing-section bg-gray" id="pricing">
+    <div class="container text-center">
+      <h2 class="reveal">Simple Pricing</h2>
+      <p class="section-sub reveal reveal-delay-1">Choose the plan that fits your needs.</p>
+      
+      <div class="pricing-grid">
+        <div class="price-card reveal reveal-delay-1">
+          <div class="price-header">
+            <h3>Free Plan</h3>
+            <div class="price-amount">
+              KES 0 <span>/forever</span>
+            </div>
+            <p>Perfect for trying out BioCraft and creating your first profile.</p>
+          </div>
+          <ul class="price-features">
+            <li><i class="fa-solid fa-check"></i> 2 bios per day</li>
+            <li><i class="fa-solid fa-check"></i> Standard tone</li>
+            <li><i class="fa-solid fa-check"></i> Copy to clipboard</li>
+          </ul>
+          <a href="#generator" class="btn btn-outline price-btn">Start for Free</a>
+        </div>
+        
+        <div class="price-card popular reveal reveal-delay-2">
+          <div class="popular-badge">MOST POPULAR</div>
+          <div class="price-header">
+            <h3>Pro Plan</h3>
+            <div class="price-amount">
+              KES 299 <span>/month</span>
+            </div>
+            <p>For students applying to multiple roles and internships.</p>
+          </div>
+          <ul class="price-features">
+            <li><i class="fa-solid fa-check"></i> <strong>Unlimited</strong> generations</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Multiple tones</strong> (Pro, Friendly, etc.)</li>
+            <li><i class="fa-solid fa-check"></i> CV Summary Mode</li>
+            <li><i class="fa-solid fa-check"></i> Personal Statement Mode</li>
+            <li><i class="fa-solid fa-check"></i> PDF Download & No watermark</li>
+          </ul>
+          <button class="btn btn-primary price-btn" id="upgradeBtn">Upgrade to Pro</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FINAL CTA ======= -->
+  <section class="final-cta">
+    <div class="container text-center">
+      <h2 class="reveal">Your Future Starts With a Strong Introduction</h2>
+      <p class="reveal reveal-delay-1">Stop overthinking your bio. Start presenting yourself professionally.</p>
+      <a href="#generator" class="btn btn-primary btn-shadow reveal reveal-delay-2">Generate My Bio Now <i class="fa-solid fa-bolt" style="margin-left: 4px;"></i></a>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <a href="#" class="logo">
+          <div class="logo-icon">B</div>
+          BioCraft
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>AI-powered writing tool for students. Made for campus innovators.</p>
+      <p>&copy; 2026 BioCraft. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Custom override script to link dual-select to the hidden radios for logic compatibility -->
+  <script>
+    document.getElementById('toneSelect').addEventListener('change', function(e) {
+      const formId = "tone" + e.target.value.substring(0,3).replace('Fri', 'Friendly');
+      const rad = document.getElementById(formId);
+      if(rad) rad.checked = true;
+    });
+  </script>
+
+  <!-- ======= JAVASCRIPT ======= -->
+  <script src="main.js"></script>
+</body>
+</html>
