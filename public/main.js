@@ -2,7 +2,7 @@
     STATE
 ========================================= */
 let bioCount = 0;
-const MAX_FREE_BIOS = 2;
+let MAX_FREE_BIOS = 2;
 let currentBioText = '';
 let isGenerating = false;
 
@@ -122,14 +122,45 @@ document.body.appendChild(overlay);
 }
 
 /* =========================================
-    UPGRADE BUTTON
+    INTASEND PAYMENT INTEGRATION
 ========================================= */
-document.getElementById('upgradeBtn').addEventListener('click', function() {
-showModal(
-    'Pro Plan Coming Soon',
-    'We\'re finalizing the Pro plan with unlimited generations, all tones, and PDF downloads. Stay tuned for the launch!',
-    [{ label: 'Sounds Good', primary: true, callback: null }]
-);
+document.addEventListener("DOMContentLoaded", function () {
+    // We poll briefly in case the sdk script is slightly delayed in loading
+    let checkIntasend = setInterval(function() {
+        if (window.IntaSend) {
+            clearInterval(checkIntasend);
+            let intasendInstance = new window.IntaSend({
+                publicAPIKey: "ISPubKey_test_7c3bd29a-2410-41da-a7de-7fa57b293155", // Using IntaSend test key
+                live: false // Set to true when deploying
+            });
+
+            intasendInstance.on("COMPLETE", (results) => { 
+                console.log("Payment Success", results); 
+                // Unlock Pro Tier locally
+                MAX_FREE_BIOS = Infinity;
+                updateUsageBadge();
+                showModal(
+                    'Payment Successful! 🎉',
+                    'You are now on the BioCraft Pro Plan. You have successfully unlocked unlimited bio generations.',
+                    [{ label: 'Awesome!', primary: true, callback: null }]
+                );
+                let upgradeBtn = document.getElementById('upgradeBtn');
+                if(upgradeBtn) {
+                    upgradeBtn.textContent = 'Pro Activated';
+                    upgradeBtn.disabled = true;
+                    upgradeBtn.style.background = '#10b981';
+                    upgradeBtn.style.borderColor = '#10b981';
+                }
+            })
+            .on("FAILED", (results) => { 
+                console.log("Payment Failed", results); 
+                showToast("Payment failed or was cancelled.", "fa-solid fa-circle-xmark");
+            })
+            .on("IN-PROGRESS", (results) => { 
+                console.log("Payment in progress", results); 
+            });
+        }
+    }, 100);
 });
 
 /* =========================================
